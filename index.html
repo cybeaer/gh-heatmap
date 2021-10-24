@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="heatmap.js"></script>
+<link rel="stylesheet" href="heatmap.css">
+<div id="heatmap"></div>
+<script>
+    let data = {};
+    //generate dummy data
+    var current = new Date(new Date().getFullYear()+'-01-01T00:00:00');
+    var end = new Date(new Date().getFullYear()+'-12-31T00:00:00');
+    while(current <= end){
+        unit = current.getDate()+'.'+(current.getMonth()+1)+'.'+current.getFullYear()+
+            'T'+current.getHours()+':'+current.getMinutes()+':'+current.getSeconds();
+        random = Math.floor((Math.random() * 10) + 1);
+        if(random > 6){
+            data[unit] = random -6;
+        }
+        current.setDate(current.getDate()+1);
+    }
+    let heatmap = new HeatmapPlugin('heatmap',data,{},{},true);
+</script>
+</body>
+</html>

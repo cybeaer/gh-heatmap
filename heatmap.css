@@ -1,0 +1,32 @@
+#heatmap{
+    flex-direction: column;
+    display: inline-flex;
+    /*
+    height: 84px;
+    width: 15px;
+    */
+    flex-wrap: wrap;
+}
+body{
+    background-color: #0d1117;
+}
+.entry{
+    display: inline-block;
+    border-radius: 2px;
+    margin: 1px;
+}
+.color-0{
+    background-color: #505050;
+}
+.color-1{
+    background-color: #006d32;
+}
+.color-2{
+    background-color: #26a641;
+}
+.color-3{
+    background-color: #26a641;
+}
+.color-4{
+    background-color: #39d353;
+}
